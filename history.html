@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Lịch sử kiểm tra - Test 4-7</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', 'Roboto', sans-serif;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #F5F7FA;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+            -webkit-text-size-adjust: 100%;
+            touch-action: manipulation;
+            overflow: visible;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 15px;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+        .header h1 {
+            font-size: 1.8em;
+            margin: 0;
+            color: #4A90E2;
+        }
+        .search-section {
+            margin-bottom: 30px;
+            min-height: 60px;
+            display: flex !important;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+        .search-section label {
+            font-weight: 500;
+            color: #4A90E2;
+            margin: 0;
+            white-space: nowrap;
+        }
+        .search-section input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #D1D5DB;
+            border-radius: 6px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            transition: border-color 0.2s;
+            box-sizing: border-box;
+            touch-action: manipulation;
+            flex: 1;
+            min-width: 200px;
+        }
+        .search-section input:focus {
+            border-color: #4A90E2;
+            outline: none;
+        }
+        .table-container {
+            overflow-x: auto;
+            margin-top: 20px;
+        }
+        .history-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        .history-table th, .history-table td {
+            border: 1px solid #E0E4EA;
+            padding: 8px;
+            text-align: center;
+            font-size: 0.9em;
+            min-width: 80px;
+            max-width: 200px;
+            overflow-wrap: break-word;
+            white-space: normal;
+        }
+        .history-table th {
+            background-color: #4A90E2;
+            color: #FFFFFF;
+            font-weight: 500;
+        }
+        .history-table tr:nth-child(even) {
+            background-color: #F9FAFB;
+        }
+        .history-table .delete-btn {
+            background-color: #EF4444;
+            color: #FFFFFF;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: background-color 0.2s;
+        }
+        .history-table .delete-btn:hover {
+            background-color: #DC2626;
+        }
+        .error-message {
+            color: #EF4444;
+            margin-top: 15px;
+            font-size: 0.95em;
+        }
+        .rank-a {
+            color: #4A90E2;
+            font-weight: 500;
+        }
+        .rank-f {
+            color: #EF4444;
+            font-weight: 500;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px 0;
+            border-top: 1px solid #E0E4EA;
+            color: #6B7280;
+            font-size: 0.9em;
+            font-family: 'Roboto', sans-serif;
+        }
+        @media (max-width: 600px) {
+            .history-table {
+                font-size: 0.8em;
+            }
+            .history-table th, .history-table td {
+                padding: 6px;
+                font-size: 0.8em;
+                min-width: 60px;
+                max-width: 150px;
+            }
+            .search-section {
+                padding: 10px;
+                display: flex !important;
+            }
+            .search-section label {
+                font-size: 14px;
+            }
+            .search-section input {
+                font-size: 14px;
+                min-width: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Lịch sử kiểm tra - Test 4-7</h1>
+    </div>
+
+    <div class="search-section">
+        <label for="search">Tìm kiếm:</label>
+        <input type="text" id="search" placeholder="Nhập tên, lớp hoặc ngày (YYYY-MM-DD)">
+    </div>
+    <div id="message" class="error-message"></div>
+
+    <div class="table-container">
+        <table class="history-table" id="history-table">
+            <thead>
+                <tr>
+                    <th>Thời gian bắt đầu</th>
+                    <th>Thời gian kết thúc</th>
+                    <th>Ngày</th>
+                    <th>Tên</th>
+                    <th>Lớp</th>
+                    <th>問題 I</th>
+                    <th>問題 II</th>
+                    <th>問題 III</th>
+                    <th>問題 IV</>th>
+                    <th>問題 V</th>
+                    <th>問題 VI</th>
+                    <th>Tổng</th>
+                    <th>Tỷ lệ</th>
+                    <th>Xếp loại</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody id="history-table-body"></tbody>
+        </table>
+    </div>
+
+    <footer>
+        <p>© 2025 Tài liệu kiểm tra | Thiết kế bởi Thuận</p>
+    </footer>
+
+    <script type="module">
+        // Import Firebase SDK
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-app.js";
+        import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-analytics.js";
+        import { getFirestore, collection, getDocs, deleteDoc, doc, enableIndexedDbPersistence } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-firestore.js";
+
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyAfy4QMD9_7PyFHpInNdKDRWuW4AYCtLJ4",
+            authDomain: "history-e4633.firebaseapp.com",
+            projectId: "history-e4633",
+            storageBucket: "history-e4633.firebasestorage.app",
+            messagingSenderId: "331974436893",
+            appId: "1:331974436893:web:10c3c6adf7b66d2b5fbef4",
+            measurementId: "G-DC055090BW"
+        };
+
+        // Initialize Firebase
+        let app, analytics, db;
+        try {
+            app = initializeApp(firebaseConfig);
+            analytics = getAnalytics(app);
+            db = getFirestore(app);
+            enableIndexedDbPersistence(db).catch(err => {
+                console.warn('Không thể kích hoạt chế độ offline:', err);
+            });
+        } catch (error) {
+            console.error('Lỗi khởi tạo Firebase:', error);
+            document.getElementById('message').textContent = 'Không thể kết nối với cơ sở dữ liệu. Vui lòng kiểm tra cấu hình hoặc kết nối mạng.';
+        }
+
+        // Define Firestore functions
+        const sectionPoints = {
+            1: 15,
+            2: 15,
+            3: 15,
+            4: 15,
+            5: 30,
+            6: 10
+        };
+
+        function normalizeString(str) {
+            return str
+                .normalize('NFKC')
+                .trim()
+                .replace(/[\s\u3000]+/g, '')
+                .replace(/[。！？｡!?.、，]/g, '')
+                .toLowerCase();
+        }
+
+        function getEvaluation(percentage) {
+            if (percentage >= 85) return 'A';
+            if (percentage >= 70) return 'B';
+            if (percentage >= 60) return 'C';
+            if (percentage >= 55) return 'D';
+            return 'F';
+        }
+
+        async function renderHistoryTable(searchTerm = '') {
+            const historyTableBody = document.getElementById('history-table-body');
+            const messageDiv = document.getElementById('message');
+            let testHistory = [];
+            const collectionName = 'testHistorytuvungnguphap4-7'; // Updated collection name
+
+            if (!db) {
+                messageDiv.textContent = 'Không thể kết nối với cơ sở dữ liệu. Vui lòng kiểm tra cấu hình Firebase.';
+                return;
+            }
+
+            try {
+                // Fetch data from testHistorytuvungnguphap4-7
+                const snapshot = await getDocs(collection(db, collectionName));
+                testHistory = snapshot.docs.map(doc => ({
+                    id: doc.id,
+                    collection: collectionName,
+                    ...doc.data()
+                }));
+
+                // Filter valid data before sorting
+                testHistory = testHistory.filter(entry => {
+                    if (!entry.timestamp || typeof entry.timestamp.toDate !== 'function') {
+                        console.warn(`Dữ liệu không hợp lệ trong collection ${entry.collection}, id ${entry.id}: Thiếu hoặc sai định dạng timestamp`);
+                        return false;
+                    }
+                    return true;
+                });
+
+                // Sort by timestamp (newest first)
+                testHistory.sort((a, b) => b.timestamp.toDate() - a.timestamp.toDate());
+
+                // Filter by search term
+                if (searchTerm) {
+                    const normalizedSearch = normalizeString(searchTerm);
+                    testHistory = testHistory.filter(entry =>
+                        normalizeString(entry.name || '').includes(normalizedSearch) ||
+                        normalizeString(entry.className || '').includes(normalizedSearch) ||
+                        normalizeString(entry.date || '').includes(normalizedSearch)
+                    );
+                }
+
+                // Clear table content before rendering
+                historyTableBody.innerHTML = '';
+                testHistory.forEach(entry => {
+                    const evaluation = getEvaluation(entry.percentage || 0);
+                    const rankClass = evaluation === 'A' ? 'rank-a' : evaluation === 'F' ? 'rank-f' : '';
+                    const row = `
+                        <tr>
+                            <td>${entry.startTime || 'N/A'}</td>
+                            <td>${entry.endTime || 'N/A'}</td>
+                            <td>${entry.date || 'N/A'}</td>
+                            <td>${entry.name || 'N/A'}</td>
+                            <td>${entry.className || 'N/A'}</td>
+                            <td>${entry.section1 || 0}/${sectionPoints[1]}</td>
+                            <td>${entry.section2 || 0}/${sectionPoints[2]}</td>
+                            <td>${entry.section3 || 0}/${sectionPoints[3]}</td>
+                            <td>${entry.section4 || 0}/${sectionPoints[4]}</td>
+                            <td>${entry.section5 || 0}/${sectionPoints[5]}</td>
+                            <td>${entry.section6 || 0}/${sectionPoints[6]}</td>
+                            <td>${entry.totalScore || 0}/100</td>
+                            <td>${Math.round(entry.percentage || 0)}%</td>
+                            <td class="${rankClass}">${evaluation}</td>
+                            <td><button class="delete-btn" data-doc-id="${entry.id}" data-collection="${entry.collection}">Xóa</button></td>
+                        </tr>
+                    `;
+                    historyTableBody.innerHTML += row;
+                });
+
+                if (testHistory.length === 0) {
+                    historyTableBody.innerHTML = '<tr><td colspan="15">Không có dữ liệu lịch sử hoặc không thể truy xuất dữ liệu.</td></tr>';
+                }
+
+                messageDiv.textContent = '';
+            } catch (error) {
+                console.error('Lỗi khi truy xuất Firestore:', error);
+                let errorMessage = 'Đã xảy ra lỗi khi tải lịch sử kiểm tra. Vui lòng thử lại.';
+                if (error.code === 'permission-denied') {
+                    errorMessage = 'Không có quyền truy cập dữ liệu. Vui lòng kiểm tra quy tắc Firestore.';
+                } else if (error.code === 'unavailable') {
+                    errorMessage = 'Không thể kết nối với Firestore. Vui lòng kiểm tra kết nối mạng.';
+                } else if (error.code === 'invalid-argument') {
+                    errorMessage = 'Lỗi cấu hình truy vấn Firestore. Vui lòng kiểm tra mã.';
+                } else {
+                    errorMessage += ` (Chi tiết: ${error.message})`;
+                }
+                messageDiv.textContent = errorMessage;
+            }
+        }
+
+        async function deleteHistoryEntry(docId, collectionName) {
+            if (!db) {
+                document.getElementById('message').textContent = 'Không thể kết nối với cơ sở dữ liệu. Vui lòng kiểm tra cấu hình Firebase.';
+                return;
+            }
+
+            if (confirm('Bạn có chắc chắn muốn xóa kết quả này không?')) {
+                try {
+                    await deleteDoc(doc(db, collectionName, docId));
+                    logEvent(analytics, 'delete_test_record', { doc_id: docId, collection: collectionName });
+                    renderHistoryTable(document.getElementById('search')?.value.trim() || '');
+                } catch (error) {
+                    console.error('Lỗi khi xóa bản ghi:', error);
+                    let errorMessage = 'Đã xảy ra lỗi khi xóa kết quả.';
+                    if (error.code === 'permission-denied') {
+                        errorMessage = 'Không có quyền xóa dữ liệu. Vui lòng kiểm tra quy tắc Firestore.';
+                    } else if (error.code === 'unavailable') {
+                        errorMessage = 'Không thể kết nối với Firestore. Vui lòng kiểm tra kết nối mạng.';
+                    }
+                    document.getElementById('message').textContent = errorMessage;
+                }
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('search');
+            renderHistoryTable();
+            if (searchInput) {
+                searchInput.addEventListener('input', () => {
+                    renderHistoryTable(searchInput.value.trim());
+                });
+            }
+
+            // Event delegation for delete buttons
+            const historyTableBody = document.getElementById('history-table-body');
+            historyTableBody.addEventListener('click', (e) => {
+                if (e.target.classList.contains('delete-btn')) {
+                    const docId = e.target.dataset.docId;
+                    const collectionName = e.target.dataset.collection;
+                    deleteHistoryEntry(docId, collectionName);
+                }
+            });
+        });
+    </script>
+    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93eae7680cb432ed',t:'MTc0NzA2MzI2Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</body>
+</html>
