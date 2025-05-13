@@ -47,293 +47,293 @@
             margin: 10px 0;
         }
         .student-info label {
-            font-weight: 500;
-            color: #4A90E2;
-            display: block;
-        }
-        .student-info input {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #D1D5DB;
-            border-radius: 6px;
-            font-family: 'Roboto', sans-serif;
-            font-size: 16px;
-            transition: border-color 0.2s;
-            box-sizing: border-box;
-        }
-        .student-info input:focus {
-            border-color: #4A90E2;
-            outline: none;
-        }
-        .question-section {
-            margin-bottom: 30px;
-            background-color: #FFFFFF;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-            display: none;
-        }
-        .question {
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #E0E4EA;
-        }
-        .options {
-            display: flex;
-            flex-direction: column;
-        }
-        .SlideBar {
-            margin: 8px 0;
-            display: flex;
-            align-items: center;
-        }
-        .SlideBar input {
-            margin-right: 12px;
-            accent-color: #4A90E2;
-        }
-        .SlideBar label {
-            font-size: 1em;
-            color: #333;
-        }
-        .example {
-            background-color: #F9FAFB;
-            padding: 15px;
-            border-left: 4px solid #4A90E2;
-            margin-bottom: 20px;
-            border-radius: 6px;
-        }
-        h2 {
-            background-color: #4A90E2;
-            color: #FFFFFF;
-            padding: 12px 15px;
-            border-radius: 8px;
-            font-size: 1.3em;
-            margin-top: 0;
-        }
-        button {
-            background-color: #4A90E2;
-            color: #FFFFFF;
-            border: none;
-            padding: 12px 24px;
-            border-radius: 8px;
-            cursor: pointer;
-            margin-top: 20px;
-            font-size: 1em;
-            font-family: 'Roboto', sans-serif;
-            transition: background-color 0.2s, transform 0.1s;
-            margin-right: 10px;
-        }
-        button:hover {
-            background-color: #357ABD;
-            transform: translateY(-1px);
-        }
-        button.reset {
-            background-color: #EF4444;
-        }
-        button.reset:hover {
-            background-color: #DC2626;
-        }
-        .vietnamese {
-            font-family: 'Roboto', sans-serif;
-            font-style: italic;
-            color: #6B7280;
-            margin-bottom: 15px;
-            font-size: 0.95em;
-        }
-        .result-section {
-            margin-top: 30px;
-            padding: 20px;
-            background-color: #FFFFFF;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            display: none;
-        }
-        .error-message {
-            color: #EF4444;
-            margin-top: 15px;
-            font-size: 0.95em;
-        }
-        .student-details {
-            margin-bottom: 20px;
-            padding: 15px;
-            background-color: #F9FAFB;
-            border-radius: 8px;
-        }
-        .student-details p {
-            margin: 8px 0;
-            font-size: 1em;
-            color: #333;
-        }
-        .result-table {
-            width: 100%;
-            min-width: 800px;
-            border-collapse: collapse;
-            margin-top: 15px;
-        }
-        .result-table th, .result-table td {
-            border: 1px solid #E0E4EA;
-            padding: 10px;
-            text-align: center;
-            font-size: 0.9em;
-            white-space: nowrap;
-        }
-        .result-table th {
-            background-color: #4A90E2;
-            color: #FFFFFF;
-            font-weight: 500;
-        }
-        .result-table tr:nth-child(even) {
-            background-color: #F9FAFB;
-        }
-        .result-table tr.total {
-            font-weight: bold;
-            background-color: #E5E7EB;
-        }
-        .result-section::-webkit-scrollbar {
-            height: 8px;
-        }
-        .result-section::-webkit-scrollbar-thumb {
-            background-color: #4A90E2;
-            border-radius: 4px;
-        }
-        .result-section::-webkit-scrollbar-track {
-            background-color: #F5F7FA;
-        }
-        .image-placeholder {
-            width: 150px;
-            height: 120px;
-            border: 1px dashed #D1D5DB;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 10px 0;
-            background-color: #F9FAFB;
-            font-size: 0.9em;
-            overflow: hidden;
-        }
-        .image-placeholder img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            padding: 20px 0;
-            border-top: 1px solid #E0E4EA;
-            color: #6B7280;
-            font-size: 0.9em;
-            font-family: 'Roboto', sans-serif;
-        }
-        .correct-answer {
-            color: #4A90E2;
-        }
-        .wrong-answer {
-            color: #EF4444;
-        }
-        .answer-feedback {
-            margin-top: 8px;
-            font-size: 0.9em;
-            color: #4A90E2;
-        }
-        .answer-feedback.wrong {
-            color: #EF4444;
-        }
-        .timer {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background-color: #4A90E2;
-            color: #FFFFFF;
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-size: 1.2em;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
-        }
-        .timer.warning {
-            background-color: #EF4444;
-        }
-        .password-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            justify-content: center;
-            align-items: center;
-            z-index: 2000;
-        }
-        .password-box {
-            background-color: #FFFFFF;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            max-width: 400px;
-            width: 90%;
-        }
-        .password-box input {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #D1D5DB;
-            border-radius: 6px;
-            font-family: 'Roboto', sans-serif;
-            font-size: 16px;
-        }
-        .password-box button {
-            margin: 10px 5px;
-        }
-        .password-error {
-            color: #EF4444;
-            font-size: 0.9em;
-            margin-top: 10px;
-        }
-        .rank-a {
-            color: #4A90E2;
-            font-weight: 500;
-        }
-        .rank-f {
-            color: #EF4444;
-            font-weight: 500;
-        }
-        .text-input {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #D1D5DB;
-            border-radius: 6px;
-            font-family: 'Roboto', sans-serif;
-            font-size: 16px;
-            margin-top: 10px;
-            box-sizing: border-box;
-        }
-        .text-input:focus {
-            border-color: #4A90E2;
-            outline: none;
-        }
-        @media (max-width: 600px) {
-            .timer {
-                top: 10px;
-                right: 10px;
-                font-size: 1em;
-                padding: 8px 16px;
-            }
-            .password-box {
-                width: 80%;
-            }
-            .result-section {
-                padding: 10px;
-            }
-            .result-table th, .result-table td {
-                font-size: 0.8em;
-                padding: 8px;
-            }
-        }
+    font-weight: 500;
+    color: #4A90E2;
+    display: block;
+}
+.student-info input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+.student-info input:focus {
+    border-color: #4A90E2;
+    outline: none;
+}
+.question-section {
+    margin-bottom: 30px;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    display: none;
+}
+.question {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #E0E4EA;
+}
+.options {
+    display: flex;
+    flex-direction: column;
+}
+.SlideBar {
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+}
+.SlideBar input {
+    margin-right: 12px;
+    accent-color: #4A90E2;
+}
+.SlideBar label {
+    font-size: 1em;
+    color: #333;
+}
+.example {
+    background-color: #F9FAFB;
+    padding: 15px;
+    border-left: 4px solid #4A90E2;
+    margin-bottom: 20px;
+    border-radius: 6px;
+}
+h2 {
+    background-color: #4A90E2;
+    color: #FFFFFF;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 1.3em;
+    margin-top: 0;
+}
+button {
+    background-color: #4A90E2;
+    color: #FFFFFF;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    transition: background-color 0.2s, transform 0.1s;
+    margin-right: 10px;
+}
+button:hover {
+    background-color: #357ABD;
+    transform: translateY(-1px);
+}
+button.reset {
+    background-color: #EF4444;
+}
+button.reset:hover {
+    background-color: #DC2626;
+}
+.vietnamese {
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    color: #6B7280;
+    margin-bottom: 15px;
+    font-size: 0.95em;
+}
+.result-section {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    display: none;
+}
+.error-message {
+    color: #EF4444;
+    margin-top: 15px;
+    font-size: 0.95em;
+}
+.student-details {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #F9FAFB;
+    border-radius: 8px;
+}
+.student-details p {
+    margin: 8px 0;
+    font-size: 1em;
+    color: #333;
+}
+.result-table {
+    width: 100%;
+    min-width: 800px;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+.result-table th, .result-table td {
+    border: 1px solid #E0E4EA;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9em;
+    white-space: nowrap;
+}
+.result-table th {
+    background-color: #4A90E2;
+    color: #FFFFFF;
+    font-weight: 500;
+}
+.result-table tr:nth-child(even) {
+    background-color: #F9FAFB;
+}
+.result-table tr.total {
+    font-weight: bold;
+    background-color: #E5E7EB;
+}
+.result-section::-webkit-scrollbar {
+    height: 8px;
+}
+.result-section::-webkit-scrollbar-thumb {
+    background-color: #4A90E2;
+    border-radius: 4px;
+}
+.result-section::-webkit-scrollbar-track {
+    background-color: #F5F7FA;
+}
+.image-placeholder {
+    width: 150px;
+    height: 120px;
+    border: 1px dashed #D1D5DB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    background-color: #F9FAFB;
+    font-size: 0.9em;
+    overflow: hidden;
+}
+.image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px 0;
+    border-top: 1px solid #E0E4EA;
+    color: #6B7280;
+    font-size: 0.9em;
+    font-family: 'Roboto', sans-serif;
+}
+.correct-answer {
+    color: #4A90E2;
+}
+.wrong-answer {
+    color: #EF4444;
+}
+.answer-feedback {
+    margin-top: 8px;
+    font-size: 0.9em;
+    color: #4A90E2;
+}
+.answer-feedback.wrong {
+    color: #EF4444;
+}
+.timer {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4A90E2;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1.2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+.timer.warning {
+    background-color: #EF4444;
+}
+.password-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+.password-box {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+.password-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+.password-box button {
+    margin: 10px 5px;
+}
+.password-error {
+    color: #EF4444;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+.rank-a {
+    color: #4A90E2;
+    font-weight: 500;
+}
+.rank-f {
+    color: #EF4444;
+    font-weight: 500;
+}
+.text-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+.text-input:focus {
+    border-color: #4A90E2;
+    outline: none;
+}
+@media (max-width: 600px) {
+    .timer {
+        top: 10px;
+        right: 10px;
+        font-size: 1em;
+        padding: 8px 16px;
+    }
+    .password-box {
+        width: 80%;
+    }
+    .result-section {
+        padding: 10px;
+    }
+    .result-table th, .result-table td {
+        font-size: 0.8em;
+        padding: 8px;
+    }
+}
     </style>
 </head>
 <body>
@@ -382,8 +382,8 @@
                     <label for="q1-rei-2">つくえ</label>
                 </div>
                 <div class="SlideBar">
-                    <input type="radio" id="q1-rei-3" name="q1-rei"checked >
-                    <label for="q1-rei-3">ほん</label >
+                    <input type="radio" id="q1-rei-3" name="q1-rei" checked>
+                    <label for="q1-rei-3">ほん</label>
                 </div>
             </div>
             <div class="answer-feedback" id="feedback-q1-rei"></div>
@@ -510,7 +510,7 @@
                     <label for="q2-rei-2">を</label>
                 </div>
                 <div class="SlideBar">
-                    <input type="radio" id="q2-rei-3" name="q2-rei"checked>
+                    <input type="radio" id="q2-rei-3" name="q2-rei" checked>
                     <label for="q2-rei-3">は</label>
                 </div>
             </div>
@@ -619,7 +619,7 @@
                     <label for="q3-rei-1">ききます</label>
                 </div>
                 <div class="SlideBar">
-                    <input type="radio" id="q3-rei-2" name="q3-rei"checked>
+                    <input type="radio" id="q3-rei-2" name="q3-rei" checked>
                     <label for="q3-rei-2">たべます</label>
                 </div>
                 <div class="SlideBar">
@@ -829,7 +829,7 @@
             <p>２４．</p>
             <div class="options">
                 <div class="SlideBar">
-                    <input type="radio" id="q24-1" name="q24">
+                    <input type="radio" id="q24-1" name "q24">
                     <label for="q24-1">すみ</label>
                 </div>
                 <div class="SlideBar">
@@ -972,7 +972,7 @@
                     <label for="q7-rei-1">こんにちは</label>
                 </div>
                 <div class="SlideBar">
-                    <input type="radio" id="q7-rei-2" name="q7-rei"checked>
+                    <input type="radio" id="q7-rei-2" name="q7-rei" checked>
                     <label for="q7-rei-2">おはようございます</label>
                 </div>
                 <div class="SlideBar">
@@ -1099,391 +1099,427 @@
     </footer>
 
     <script type="module">
-        console.log("JavaScript loaded successfully");
-
-        // Firebase imports
+        // Firebase imports (moved to top-level)
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-app.js";
         import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-firestore.js";
 
-        // Firebase configuration
-        const firebaseConfig = {
-            apiKey: "AIzaSyAfy4QMD9_7PyFHpInNdKDRWuW4AYCtLJ4",
-            authDomain: "history-e4633.firebaseapp.com",
-            projectId: "history-e4633",
-            storageBucket: "history-e4633.firebasestorage.app",
-            messagingSenderId: "331974436893",
-            appId: "1:331974436893:web:10c3c6adf7b66d2b5fbef4",
-            measurementId: "G-DC055090BW"
-        };
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("JavaScript loaded successfully");
 
-        // Initialize Firebase
-        let db = null;
-        try {
-            const app = initializeApp(firebaseConfig);
-            db = getFirestore(app);
-            console.log("Firebase initialized successfully");
-        } catch (error) {
-            console.error("Failed to initialize Firebase:", error);
-            document.getElementById('message-info').textContent = 'Không thể khởi tạo Firebase. Kết quả sẽ được lưu cục bộ.';
-        }
+            // Firebase configuration
+            const firebaseConfig = {
+                apiKey: "AIzaSyAfy4QMD9_7PyFHpInNdKDRWuW4AYCtLJ4",
+                authDomain: "history-e4633.firebaseapp.com",
+                projectId: "history-e4633",
+                storageBucket: "history-e4633.firebasestorage.app",
+                messagingSenderId: "331974436893",
+                appId: "1:331974436893:web:10c3c6adf7b66d2b5fbef4",
+                measurementId: "G-DC055090BW"
+            };
 
-        const answerKey = {
-            1: 1, 2: 1, 3: 1, 4: 1, 5: 1, // 問題 I
-            6: 1, 7: 1, 8: 1, 9: 1, 10: 1, // 問題 II
-            11: 1, 12: 2, 13: 1, 14: 1, 15: 1, // 問題 III
-            16: "わたしはまいあさがっこうにいきます。", // 問題 IV
-            17: "わたしはまいばんテレビをみます。",
-            18: "としょかんでほんをよみます。",
-            19: "スーパーでやさいをかいます。",
-            20: "こうえんでサッカーをします。",
-            21: 1, 22: 3, 23: 2, 24: 2, 25: 2, // 問題 V
-            26: 1, 27: 2, 28: 1, 29: 2, 30: 1, // 問題 VI
-            31: 1, 32: 1, 33: 1, 34: 1, 35: 1 // 問題 VII
-        };
+            // Initialize Firebase
+            let db = null;
+            try {
+                const app = initializeApp(firebaseConfig);
+                db = getFirestore(app);
+                console.log("Firebase initialized successfully");
+            } catch (error) {
+                console.error("Failed to initialize Firebase:", error);
+                document.getElementById('message-info').textContent = 'Không thể khởi tạo Firebase. Kết quả sẽ được lưu cục bộ.';
+            }
 
-        const sectionPoints = {
-            1: 10, 2: 10, 3: 10, 4: 20, 5: 15, 6: 25, 7: 10
-        };
+            // Answer key
+            const answerKey = {
+                1: "でんしゃ", 2: "びょういん", 3: "えいが", 4: "さかな", 5: "かさ",
+                6: "は", 7: "で", 8: "に", 9: "に", 10: "は",
+                11: "みます", 12: "よみます", 13: "かきます", 14: "します", 15: "かいます",
+                16: "わたしはまいあさがっこうにいきます。",
+                17: "わたしはまいばんテレビをみます。",
+                18: "としょかんでほんをよみます。",
+                19: "スーパーでやさいをかいます。",
+                20: "こうえんでサッカーをします。",
+                21: "はじめまして。", 22: "こちらこそ", 23: "いき", 24: "いき", 25: "なに",
+                26: "にほんじん", 27: "7じ", 28: "でんしゃ", 29: "やさいや にく", 30: "テレビを みます",
+                31: "あそこです。", 32: "それは かさです。", 33: "ごじです。", 34: "スーパーで かいます。", 35: "サッカーを します。"
+            };
 
-        let startTime = null;
-        let timerInterval = null;
+            const sectionPoints = {
+                1: 10, 2: 10, 3: 10, 4: 20, 5: 15, 6: 25, 7: 10
+            };
 
-        function normalizeString(str) {
-            return str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '');
-        }
+            let startTime = null;
+            let timerInterval = null;
 
-        function getEvaluation(percentage) {
-            if (percentage >= 80) return 'A';
-            if (percentage >= 60) return 'B';
-            if (percentage >= 40) return 'C';
-            if (percentage >= 20) return 'D';
-            return 'F';
-        }
+            function normalizeString(str) {
+                return str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '');
+            }
 
-        function calculateRadioSectionScore(startQuestion, endQuestion, pointsPerQuestion) {
-            let score = 0;
-            for (let i = startQuestion; i <= endQuestion; i++) {
-                const selectedOption = document.querySelector(`input[name="q${i}"]:checked`);
-                if (selectedOption) {
-                    const userAnswer = parseInt(selectedOption.id.split('-')[1]);
-                    if (userAnswer === answerKey[i]) {
-                        score += pointsPerQuestion;
-                    }
-                    showRadioAnswerFeedback(i);
+            function getEvaluation(percentage) {
+                if (percentage >= 80) return 'A';
+                if (percentage >= 60) return 'B';
+                if (percentage >= 40) return 'C';
+                if (percentage >= 20) return 'D';
+                return 'F';
+            }
+
+            function shuffleArray(array) {
+                for (let i = array.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [array[i], array[j]] = [array[j], array[i]];
+                }
+                return array;
+            }
+
+            function shuffleOptions(questionNumber, sectionIndex) {
+                const section = document.querySelectorAll('.question-section')[sectionIndex];
+                const optionsContainer = section.querySelector(`.question:nth-child(${questionNumber + 1}) .options`);
+                if (!optionsContainer) return;
+
+                const options = Array.from(optionsContainer.querySelectorAll('.SlideBar'));
+                const shuffledOptions = shuffleArray(options);
+
+                optionsContainer.innerHTML = '';
+                shuffledOptions.forEach(option => {
+                    optionsContainer.appendChild(option);
+                });
+            }
+
+            function shuffleAllOptions() {
+                for (let i = 1; i <= 5; i++) {
+                    shuffleOptions(i, 0);
+                    shuffleOptions(i, 1);
+                    shuffleOptions(i, 2);
+                    shuffleOptions(i, 4);
+                    shuffleOptions(i, 5);
+                    shuffleOptions(i, 6);
                 }
             }
-            return score;
-        }
 
-        function calculateTextSectionScore(startQuestion, endQuestion, pointsPerQuestion) {
-            let score = 0;
-            for (let i = startQuestion; i <= endQuestion; i++) {
-                const userAnswer = document.getElementById(`q${i}`).value.trim();
-                if (userAnswer) {
-                    const normalizedUserAnswer = normalizeString(userAnswer);
-                    const normalizedCorrectAnswer = normalizeString(answerKey[i]);
-                    if (normalizedUserAnswer === normalizedCorrectAnswer) {
-                        score += pointsPerQuestion;
+            function calculateRadioSectionScore(startQuestion, endQuestion, pointsPerQuestion) {
+                let score = 0;
+                for (let i = startQuestion; i <= endQuestion; i++) {
+                    const selectedOption = document.querySelector(`input[name="q${i}"]:checked`);
+                    if (selectedOption) {
+                        const userAnswer = selectedOption.nextElementSibling.textContent;
+                        if (userAnswer === answerKey[i]) {
+                            score += pointsPerQuestion;
+                        }
+                        showRadioAnswerFeedback(i);
                     }
-                    showTextAnswerFeedback(i);
                 }
+                return score;
             }
-            return score;
-        }
 
-        function showRadioAnswerFeedback(questionNumber) {
-            const feedbackElement = document.getElementById(`feedback-${questionNumber}`);
-            const selectedOption = document.querySelector(`input[name="q${questionNumber}"]:checked`);
-            if (!selectedOption) {
-                feedbackElement.textContent = 'Bạn chưa chọn đáp án.';
-                feedbackElement.classList.add('wrong');
-                return;
+            function calculateTextSectionScore(startQuestion, endQuestion, pointsPerQuestion) {
+                let score = 0;
+                for (let i = startQuestion; i <= endQuestion; i++) {
+                    const userAnswer = document.getElementById(`q${i}`).value.trim();
+                    if (userAnswer) {
+                        const normalizedUserAnswer = normalizeString(userAnswer);
+                        const normalizedCorrectAnswer = normalizeString(answerKey[i]);
+                        if (normalizedUserAnswer === normalizedCorrectAnswer) {
+                            score += pointsPerQuestion;
+                        }
+                        showTextAnswerFeedback(i);
+                    }
+                }
+                return score;
             }
-            const userAnswer = parseInt(selectedOption.id.split('-')[1]);
-            if (userAnswer === answerKey[questionNumber]) {
-                feedbackElement.textContent = 'Đúng!';
-                feedbackElement.classList.remove('wrong');
-            } else {
-                feedbackElement.textContent = `Sai. Đáp án đúng là: ${answerKey[questionNumber]}`;
-                feedbackElement.classList.add('wrong');
-            }
-        }
 
-        function showTextAnswerFeedback(questionNumber) {
-            const feedbackElement = document.getElementById(`feedback-${questionNumber}`);
-            const userAnswer = document.getElementById(`q${questionNumber}`).value.trim();
-            if (!userAnswer) {
-                feedbackElement.textContent = 'Bạn chưa nhập câu trả lời.';
-                feedbackElement.classList.add('wrong');
-                return;
-            }
-            const normalizedUserAnswer = normalizeString(userAnswer);
-            const normalizedCorrectAnswer = normalizeString(answerKey[questionNumber]);
-            if (normalizedUserAnswer === normalizedCorrectAnswer) {
-                feedbackElement.textContent = 'Đúng!';
-                feedbackElement.classList.remove('wrong');
-            } else {
-                feedbackElement.textContent = `Sai. Đáp án đúng là: ${answerKey[questionNumber]}`;
-                feedbackElement.classList.add('wrong');
-            }
-        }
-
-        function formatTime(date) {
-            return date.toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
-        }
-
-        function startTimer() {
-            console.log("Starting timer");
-            startTime = new Date();
-            const endTime = new Date(startTime.getTime() + 40 * 60 * 1000);
-            const timerElement = document.getElementById('timer');
-
-            timerInterval = setInterval(() => {
-                const now = new Date();
-                const timeLeft = endTime - now;
-                if (timeLeft <= 0) {
-                    clearInterval(timerInterval);
-                    timerElement.textContent = 'Hết giờ!';
-                    timerElement.classList.add('warning');
-                    submitTest();
+            function showRadioAnswerFeedback(questionNumber) {
+                const feedbackElement = document.getElementById(`feedback-${questionNumber}`);
+                const selectedOption = document.querySelector(`input[name="q${questionNumber}"]:checked`);
+                if (!selectedOption) {
+                    feedbackElement.textContent = 'Bạn chưa chọn đáp án.';
+                    feedbackElement.classList.add('wrong');
                     return;
                 }
-                const minutes = Math.floor(timeLeft / 1000 / 60);
-                const seconds = Math.floor((timeLeft / 1000) % 60);
-                timerElement.textContent = `Thời gian còn lại: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-                if (timeLeft <= 5 * 60 * 1000) {
-                    timerElement.classList.add('warning');
+                const userAnswer = selectedOption.nextElementSibling.textContent;
+                if (userAnswer === answerKey[questionNumber]) {
+                    feedbackElement.textContent = 'Đúng!';
+                    feedbackElement.classList.remove('wrong');
+                } else {
+                    feedbackElement.textContent = `Sai. Đáp án đúng là: ${answerKey[questionNumber]}`;
+                    feedbackElement.classList.add('wrong');
                 }
-            }, 1000);
-        }
+            }
 
-        function checkPassword() {
-            const passwordInput = document.getElementById('password-input').value.trim();
-            const passwordError = document.getElementById('password-error');
-            if (passwordInput === '112') {
-                window.location.href = 'history.html';
-            } else {
-                passwordError.textContent = 'Mật khẩu không đúng. Vui lòng thử lại.';
+            function showTextAnswerFeedback(questionNumber) {
+                const feedbackElement = document.getElementById(`feedback-${questionNumber}`);
+                const userAnswer = document.getElementById(`q${questionNumber}`).value.trim();
+                if (!userAnswer) {
+                    feedbackElement.textContent = 'Bạn chưa nhập câu trả lời.';
+                    feedbackElement.classList.add('wrong');
+                    return;
+                }
+                const normalizedUserAnswer = normalizeString(userAnswer);
+                const normalizedCorrectAnswer = normalizeString(answerKey[questionNumber]);
+                if (normalizedUserAnswer === normalizedCorrectAnswer) {
+                    feedbackElement.textContent = 'Đúng!';
+                    feedbackElement.classList.remove('wrong');
+                } else {
+                    feedbackElement.textContent = `Sai. Đáp án đúng là: ${answerKey[questionNumber]}`;
+                    feedbackElement.classList.add('wrong');
+                }
+            }
+
+            function formatTime(date) {
+                return date.toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+            }
+
+            function startTimer() {
+                console.log("Starting timer");
+                startTime = new Date();
+                const endTime = new Date(startTime.getTime() + 40 * 60 * 1000);
+                const timerElement = document.getElementById('timer');
+
+                timerInterval = setInterval(() => {
+                    const now = new Date();
+                    const timeLeft = endTime - now;
+                    if (timeLeft <= 0) {
+                        clearInterval(timerInterval);
+                        timerElement.textContent = 'Hết giờ!';
+                        timerElement.classList.add('warning');
+                        submitTest();
+                        return;
+                    }
+                    const minutes = Math.floor(timeLeft / 1000 / 60);
+                    const seconds = Math.floor((timeLeft / 1000) % 60);
+                    timerElement.textContent = `Thời gian còn lại: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+                    if (timeLeft <= 5 * 60 * 1000) {
+                        timerElement.classList.add('warning');
+                    }
+                }, 1000);
+            }
+
+            function checkPassword() {
+                const passwordInput = document.getElementById('password-input').value.trim();
+                const passwordError = document.getElementById('password-error');
+                if (passwordInput === '112') {
+                    window.location.href = 'history.html';
+                } else {
+                    passwordError.textContent = 'Mật khẩu không đúng. Vui lòng thử lại.';
+                    document.getElementById('password-input').value = '';
+                }
+            }
+
+            function showPasswordModal() {
+                document.getElementById('password-modal').style.display = 'flex';
+                document.getElementById('password-input').focus();
+            }
+
+            function closePasswordModal() {
+                document.getElementById('password-modal').style.display = 'none';
                 document.getElementById('password-input').value = '';
-            }
-        }
-
-        function showPasswordModal() {
-            document.getElementById('password-modal').style.display = 'flex';
-            document.getElementById('password-input').focus();
-        }
-
-        function closePasswordModal() {
-            document.getElementById('password-modal').style.display = 'none';
-            document.getElementById('password-input').value = '';
-            document.getElementById('password-error').textContent = '';
-        }
-
-        window.checkPassword = checkPassword;
-        window.showPasswordModal = showPasswordModal;
-        window.closePasswordModal = closePasswordModal;
-        window.resetTest = resetTest;
-
-        async function submitTest() {
-            const endTime = new Date();
-            const name = document.getElementById('name').value.trim();
-            const className = document.getElementById('class').value.trim();
-            const dateInput = document.getElementById('date').value;
-            const messageResult = document.getElementById('message-result');
-            const resultSection = document.getElementById('results');
-            const scoreDisplay = document.getElementById('score-display');
-
-            if (!name || !className || !dateInput) {
-                messageResult.textContent = 'Vui lòng điền đầy đủ thông tin cá nhân.';
-                return;
+                document.getElementById('password-error').textContent = '';
             }
 
-            clearInterval(timerInterval);
-            document.getElementById('timer').style.display = 'none';
-            document.getElementById('submit-test').style.display = 'none';
-
-            const section1Score = calculateRadioSectionScore(1, 5, 2);
-            const section2Score = calculateRadioSectionScore(6, 10, 2);
-            const section3Score = calculateRadioSectionScore(11, 15, 2);
-            const section4Score = calculateTextSectionScore(16, 20, 4);
-            const section5Score = calculateRadioSectionScore(21, 25, 3);
-            const section6Score = calculateRadioSectionScore(26, 30, 5);
-            const section7Score = calculateRadioSectionScore(31, 35, 2);
-
-            const totalRawScore = section1Score + section2Score + section3Score + section4Score + section5Score + section6Score + section7Score;
-            const totalScore = Math.round((totalRawScore / 100) * 100);
-            const percentage = totalScore;
-            const evaluation = getEvaluation(percentage);
-            const rankClass = evaluation === 'A' ? 'rank-a' : evaluation === 'F' ? 'rank-f' : '';
-
-            const section4Answers = {
-                q16: document.getElementById('q16').value.trim() || '',
-                q17: document.getElementById('q17').value.trim() || '',
-                q18: document.getElementById('q18').value.trim() || '',
-                q19: document.getElementById('q19').value.trim() || '',
-                q20: document.getElementById('q20').value.trim() || ''
-            };
-
-            const resultTable = `
-                <div class="student-details">
-                    <p><strong>Tên:</strong> ${name}</p>
-                    <p><strong>Lớp:</strong> ${className}</p>
-                    <p><strong>Ngày:</strong> ${dateInput}</p>
-                </div>
-                <table class="result-table">
-                    <thead>
-                        <tr>
-                            <th>問題 I</th>
-                            <th>問題 II</th>
-                            <th>問題 III</th>
-                            <th>問題 IV</th>
-                            <th>問題 V</th>
-                            <th>問題 VI</th>
-                            <th>問題 VII</th>
-                            <th>Tổng</th>
-                            <th>Tỷ lệ</th>
-                            <th>Xếp loại</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>${section1Score}/${sectionPoints[1]}</td>
-                            <td>${section2Score}/${sectionPoints[2]}</td>
-                            <td>${section3Score}/${sectionPoints[3]}</td>
-                            <td>${section4Score}/${sectionPoints[4]}</td>
-                            <td>${section5Score}/${sectionPoints[5]}</td>
-                            <td>${section6Score}/${sectionPoints[6]}</td>
-                            <td>${section7Score}/${sectionPoints[7]}</td>
-                            <td>${totalScore}/100</td>
-                            <td>${percentage}%</td>
-                            <td class="${rankClass}">${evaluation}</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <button onclick="window.showPasswordModal()">Lịch sử kiểm tra</button>
-                <button class="reset" onclick="window.resetTest()">Làm lại</button>
-            `;
-
-            scoreDisplay.innerHTML = resultTable;
-            resultSection.style.display = 'block';
-
-            const firestoreDoc = {
-                startTime: formatTime(startTime),
-                endTime: formatTime(endTime),
-                date: dateInput,
-                name,
-                className,
-                section1: section1Score,
-                section2: section2Score,
-                section3: section3Score,
-                section4: section4Score,
-                section5: section5Score,
-                section6: section6Score,
-                section7: section7Score,
-                section4Answers,
-                totalScore,
-                percentage,
-                evaluation,
-                timestamp: new Date()
-            };
-
-            let isValid = true;
-            for (const [key, value] of Object.entries(firestoreDoc)) {
-                if (value === undefined || value === null) {
-                    console.error(`Invalid Firestore data: ${key} is ${value}`);
-                    isValid = false;
-                }
-            }
-
-            const testHistory = JSON.parse(localStorage.getItem('testHistory4-7') || '[]');
-            testHistory.push(firestoreDoc);
-            localStorage.setItem('testHistory4-7', JSON.stringify(testHistory));
-
-            if (db && isValid) {
-                try {
-                    await addDoc(collection(db, 'testHistorytuvungnguphap4-7'), firestoreDoc);
-                    messageResult.textContent = 'Kết quả đã được lưu thành công!';
-                } catch (error) {
-                    console.error('Lỗi khi lưu vào Firestore:', error);
-                    messageResult.textContent = `Đã xảy ra lỗi khi lưu kết quả: ${error.message}`;
-                }
-            } else {
-                messageResult.textContent = 'Dữ liệu không hợp lệ hoặc Firebase không khả dụng. Kết quả đã được lưu cục bộ.';
-            }
-        }
-
-        function resetTest() {
-            console.log("Resetting test");
-            document.getElementById('name').value = '';
-            document.getElementById('class').value = '';
-            document.getElementById('date').value = '';
-            document.getElementById('message-info').textContent = '';
-            document.getElementById('message-result').textContent = '';
-            document.getElementById('results').style.display = 'none';
-            document.getElementById('score-display').innerHTML = '';
-            document.getElementById('timer').style.display = 'none';
-            document.getElementById('submit-test').style.display = 'none';
-            document.getElementById('start-test').style.display = 'block';
-            document.getElementById('history-test').style.display = 'block';
-            document.querySelectorAll('.question-section').forEach(section => {
-                section.style.display = 'none';
-            });
-            document.querySelectorAll('input[type="radio"]').forEach(input => {
-                input.checked = false;
-            });
-            document.querySelectorAll('input[type="text"]').forEach(input => {
-                input.value = '';
-            });
-            document.querySelectorAll('.answer-feedback').forEach(feedback => {
-                feedback.textContent = '';
-                feedback.classList.remove('wrong');
-            });
-            clearInterval(timerInterval);
-        }
-
-        // Attach event listener for start-test button
-        const startButton = document.getElementById('start-test');
-        if (startButton) {
-            startButton.addEventListener('click', () => {
-                console.log("Start test button clicked");
+            async function submitTest() {
+                const endTime = new Date();
                 const name = document.getElementById('name').value.trim();
                 const className = document.getElementById('class').value.trim();
                 const dateInput = document.getElementById('date').value;
-                const messageInfo = document.getElementById('message-info');
+                const messageResult = document.getElementById('message-result');
+                const resultSection = document.getElementById('results');
+                const scoreDisplay = document.getElementById('score-display');
 
-                const missingFields = [];
-                if (!name) missingFields.push("Tên");
-                if (!className) missingFields.push("Lớp");
-                if (!dateInput) missingFields.push("Ngày");
-
-                if (missingFields.length > 0) {
-                    messageInfo.textContent = `Vui lòng điền đầy đủ thông tin: ${missingFields.join(", ")}.`;
+                if (!name || !className || !dateInput) {
+                    messageResult.textContent = 'Vui lòng điền đầy đủ thông tin cá nhân.';
                     return;
                 }
 
-                messageInfo.textContent = '';
-                document.getElementById('start-test').style.display = 'none';
-                document.getElementById('history-test').style.display = 'none';
-                document.querySelectorAll('.question-section').forEach(section => {
-                    console.log("Showing section:", section);
-                    section.style.display = 'block';
-                });
-                document.getElementById('submit-test').style.display = 'block';
-                document.getElementById('timer').style.display = 'block';
-                startTimer();
-            });
-        } else {
-            console.error("Start test button not found");
-            document.getElementById('message-info').textContent = 'Lỗi: Không tìm thấy nút Bắt đầu làm bài.';
-        }
+                clearInterval(timerInterval);
+                document.getElementById('timer').style.display = 'none';
+                document.getElementById('submit-test').style.display = 'none';
 
-        // Attach event listener for submit-test button
-        const submitButton = document.getElementById('submit-test');
-        if (submitButton) {
-            submitButton.addEventListener('click', submitTest);
-        } else {
-            console.error("Submit test button not found");
-        }
+                const section1Score = calculateRadioSectionScore(1, 5, 2);
+                const section2Score = calculateRadioSectionScore(6, 10, 2);
+                const section3Score = calculateRadioSectionScore(11, 15, 2);
+                const section4Score = calculateTextSectionScore(16, 20, 4);
+                const section5Score = calculateRadioSectionScore(21, 25, 3);
+                const section6Score = calculateRadioSectionScore(26, 30, 5);
+                const section7Score = calculateRadioSectionScore(31, 35, 2);
+
+                const totalRawScore = section1Score + section2Score + section3Score + section4Score + section5Score + section6Score + section7Score;
+                const totalScore = Math.round((totalRawScore / 100) * 100);
+                const percentage = totalScore;
+                const evaluation = getEvaluation(percentage);
+                const rankClass = evaluation === 'A' ? 'rank-a' : evaluation === 'F' ? 'rank-f' : '';
+
+                const section4Answers = {
+                    q16: document.getElementById('q16').value.trim() || '',
+                    q17: document.getElementById('q17').value.trim() || '',
+                    q18: document.getElementById('q18').value.trim() || '',
+                    q19: document.getElementById('q19').value.trim() || '',
+                    q20: document.getElementById('q20').value.trim() || ''
+                };
+
+                const resultTable = `
+                    <div class="student-details">
+                        <p><strong>Tên:</strong> ${name}</p>
+                        <p><strong>Lớp:</strong> ${className}</p>
+                        <p><strong>Ngày:</strong> ${dateInput}</p>
+                    </div>
+                    <table class="result-table">
+                        <thead>
+                            <tr>
+                                <th>問題 I</th>
+                                <th>問題 II</th>
+                                <th>問題 III</th>
+                                <th>問題 IV</th>
+                                <th>問題 V</th>
+                                <th>問題 VI</th>
+                                <th>問題 VII</th>
+                                <th>Tổng</th>
+                                <th>Tỷ lệ</th>
+                                <th>Xếp loại</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>${section1Score}/${sectionPoints[1]}</td>
+                                <td>${section2Score}/${sectionPoints[2]}</td>
+                                <td>${section3Score}/${sectionPoints[3]}</td>
+                                <td>${section4Score}/${sectionPoints[4]}</td>
+                                <td>${section5Score}/${sectionPoints[5]}</td>
+                                <td>${section6Score}/${sectionPoints[6]}</td>
+                                <td>${section7Score}/${sectionPoints[7]}</td>
+                                <td>${totalScore}/100</td>
+                                <td>${percentage}%</td>
+                                <td class="${rankClass}">${evaluation}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button onclick="window.showPasswordModal()">Lịch sử kiểm tra</button>
+                    <button class="reset" onclick="window.resetTest()">Làm lại</button>
+                `;
+
+                scoreDisplay.innerHTML = resultTable;
+                resultSection.style.display = 'block';
+
+                const firestoreDoc = {
+                    startTime: formatTime(startTime),
+                    endTime: formatTime(endTime),
+                    date: dateInput,
+                    name,
+                    className,
+                    section1: section1Score,
+                    section2: section2Score,
+                    section3: section3Score,
+                    section4: section4Score,
+                    section5: section5Score,
+                    section6: section6Score,
+                    section7: section7Score,
+                    section4Answers,
+                    totalScore,
+                    percentage,
+                    evaluation,
+                    timestamp: new Date()
+                };
+
+                let isValid = true;
+                for (const [key, value] of Object.entries(firestoreDoc)) {
+                    if (value === undefined || value === null) {
+                        console.error(`Invalid Firestore data: ${key} is ${value}`);
+                        isValid = false;
+                    }
+                }
+
+                const testHistory = JSON.parse(localStorage.getItem('testHistory4-7') || '[]');
+                testHistory.push(firestoreDoc);
+                localStorage.setItem('testHistory4-7', JSON.stringify(testHistory));
+
+                if (db && isValid) {
+                    try {
+                        await addDoc(collection(db, 'testHistorytuvungnguphap4-7'), firestoreDoc);
+                        messageResult.textContent = 'Kết quả đã được lưu thành công!';
+                    } catch (error) {
+                        console.error('Lỗi khi lưu vào Firestore:', error);
+                        messageResult.textContent = `Đã xảy ra lỗi khi lưu kết quả: ${error.message}`;
+                    }
+                } else {
+                    messageResult.textContent = 'Dữ liệu không hợp lệ hoặc Firebase không khả dụng. Kết quả đã được lưu cục bộ.';
+                }
+            }
+
+            function resetTest() {
+                console.log("Resetting test");
+                document.getElementById('name').value = '';
+                document.getElementById('class').value = '';
+                document.getElementById('date').value = '';
+                document.getElementById('message-info').textContent = '';
+                document.getElementById('message-result').textContent = '';
+                document.getElementById('results').style.display = 'none';
+                document.getElementById('score-display').innerHTML = '';
+                document.getElementById('timer').style.display = 'none';
+                document.getElementById('submit-test').style.display = 'none';
+                document.getElementById('start-test').style.display = 'block';
+                document.getElementById('history-test').style.display = 'block';
+                document.querySelectorAll('.question-section').forEach(section => {
+                    section.style.display = 'none';
+                });
+                document.querySelectorAll('input[type="radio"]').forEach(input => {
+                    input.checked = false;
+                });
+                document.querySelectorAll('input[type="text"]').forEach(input => {
+                    input.value = '';
+                });
+                document.querySelectorAll('.answer-feedback').forEach(feedback => {
+                    feedback.textContent = '';
+                    feedback.classList.remove('wrong');
+                });
+                clearInterval(timerInterval);
+                location.reload();
+            }
+
+            window.checkPassword = checkPassword;
+            window.showPasswordModal = showPasswordModal;
+            window.closePasswordModal = closePasswordModal;
+            window.resetTest = resetTest;
+
+            const startButton = document.getElementById('start-test');
+            if (startButton) {
+                startButton.addEventListener('click', () => {
+                    console.log("Start test button clicked");
+                    const name = document.getElementById('name').value.trim();
+                    const className = document.getElementById('class').value.trim();
+                    const dateInput = document.getElementById('date').value;
+                    const messageInfo = document.getElementById('message-info');
+
+                    const missingFields = [];
+                    if (!name) missingFields.push("Tên");
+                    if (!className) missingFields.push("Lớp");
+                    if (!dateInput) missingFields.push("Ngày");
+
+                    if (missingFields.length > 0) {
+                        messageInfo.textContent = `Vui lòng điền đầy đủ thông tin: ${missingFields.join(", ")}.`;
+                        return;
+                    }
+
+                    messageInfo.textContent = '';
+                    document.getElementById('start-test').style.display = 'none';
+                    document.getElementById('history-test').style.display = 'none';
+                    document.querySelectorAll('.question-section').forEach(section => {
+                        console.log("Showing section:", section);
+                        section.style.display = 'block';
+                    });
+                    document.getElementById('submit-test').style.display = 'block';
+                    document.getElementById('timer').style.display = 'block';
+                    shuffleAllOptions();
+                    startTimer();
+                });
+            } else {
+                console.error("Start test button not found");
+                document.getElementById('message-info').textContent = 'Lỗi: Không tìm thấy nút Bắt đầu làm bài.';
+            }
+
+            const submitButton = document.getElementById('submit-test');
+            if (submitButton) {
+                submitButton.addEventListener('click', submitTest);
+            } else {
+                console.error("Submit test button not found");
+            }
+        });
     </script>
 </body>
 </html>
